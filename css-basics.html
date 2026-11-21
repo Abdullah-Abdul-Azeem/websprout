@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Websprout</title>
+        <style>
+            html{
+                background-color: rgb(11, 16, 32);
+                color: white;
+                font-family: sans-serif;
+                margin: 0px;
+            }
+            body{
+                margin: 0px;
+            }
+            *{
+                margin: 20px;
+            }
+            h1{
+                font-size: 45px;
+            }
+            h2{
+                font-size: 25px;
+            }
+            h3{
+                font-size: 20px;
+            }
+            p{
+                font-size: 15px;
+            }
+            blockquote{
+                font-family: monospace;
+                color: orange;
+                font-size: 15px;
+                margin-top: 20px; 
+                margin-bottom: 20px; 
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 15px;
+                padding-bottom: 25px;
+                background-color: black;
+            }
+            q{
+                quotes: none;
+                font-weight: bold;
+                background-color: rgb(26, 36, 64);
+                border-left: 3px solid aqua;
+                padding: 10px;
+            }
+            a{
+                color: aqua;
+                font-size: 15px;
+            }
+            a:hover{
+                box-shadow: 0px 0px 15px 5px aqua;
+            }
+            .box{
+                border: 1px solid #52586e;
+                margin-top: 20px; 
+                margin-bottom: 20px;
+                margin-left: 20px;
+                margin-right: 20px; 
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 15px;
+                padding-bottom: 25px;
+                background-color: rgb(19, 27, 48);
+            }
+            .sub_horizontal_menu{
+                text-align: center;
+                margin: 0px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                overflow: hidden;
+            }
+            .sub_horizontal_menu ul{
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+            }
+            .sub_horizontal_menu li{
+                display: block;
+                float: left;
+                width: 16.66%;
+                margin: 0px;
+                padding: 0px;
+            }
+            .sub_horizontal_menu a{
+                display: block;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: 1px solid #52586e;
+                border-radius: 10px;
+                text-decoration: none;
+                color: aqua;
+            }
+            .sub_horizontal_menu a:hover{
+                background-color: aqua;
+                color: black;
+            }
+            .heading{
+                background-image: url(banner.png);
+                padding-top: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 35px;
+                margin: 0px;
+                height: 112px;
+                background-origin: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <section class = "heading">
+            <h1>CSS Basics</h1>
+            <p>CSS changes how a web page looks. Each example shows the CSS rule, the page before, and the page after.</p>
+        </section>
+
+        <section class = "box">
+            <h2>What is CSS?</h2>
+            <p>HTML gives a page its structure. CSS gives it its look: colours, fonts, spacing and borders. A CSS rule has three parts: a selector, a property and a value.</p>
+            <blockquote>selector { property: value; }<br><br>
+            h1 { color: blue; }</blockquote>
+            <p>CSS can be written inline (style attribute), embedded (in a style element in the head), or external (a .css file linked to every page). This website uses one external file: style.css.</p>
+        </section>
+        <h2>The six properties</h2>
+        <nav class = "sub_horizontal_menu">
+            <ul>
+                <li><a href = "#colours">Colours</a></li>
+                <li><a href = "#backgrounds">Backgrounds</a></li>
+                <li><a href = "#fonts">Fonts</a></li>
+                <li><a href = "#borders">Borders</a></li>
+                <li><a href = "#margin">Margin</a></li>
+                <li><a href = "#padding">Padding</a></li>
+            </ul>
+        </nav>
+        <section class = "box" id = "colours">
+            <h2>1. Colours</h2>
+            <p>The color property changes the colour of the text. You can use a colour name, a hex code like #ff0000, or rgb / rgba.</p>
+            <section class = "examples">
+                <h3>CSS rule	Before (no CSS)	After (with the rule)</h3>
+                <blockquote>
+                .red-text {<br>
+                   color: red;<br>
+                }
+                </blockquote>
+
+                This is a paragraph.
+
+                This is a paragraph.
+            </section>
+
+            <q>Remember: rgba has a 4th number for how see-through the colour is (0.0 to 1.0).</q>
+        </section>
+        <section class = "box" id = "backgrounds">
+            <h2>2. Backgrounds</h2>
+            <p>background-color changes the colour behind an element. You can also use a picture with background-image.</p>
+            <section class = "examples">
+                <h3>CSS rule	Before (no CSS)	After (with the rule)</h3>
+                <blockquote>
+                .yellow-back {<br>
+                   background-color: yellow;<br>
+                }
+                </blockquote>
+                This is a paragraph.
+                
+                This is a paragraph.
+            </section>
+            <q>Remember: color is the text colour; background-color is the colour behind it.</q>
+        </section>
+        <section class = "box" id = "fonts">
+            <h2>3. Fonts</h2>
+            <p>font-family chooses the font, font-size changes the size and font-weight makes text bold.</p>
+            <section class = "examples">
+                <h3>CSS rule	Before (no CSS)	After (with the rule)</h3>
+                <blockquote>
+                .big-font {<br>
+                   font-family: Arial, sans-serif;<br>
+                   font-size: 20px;<br>
+                   font-weight: bold;
+                }
+                </blockquote>
+                This is a paragraph.
+                
+                This is a paragraph.
+            </section>
+            <q>Remember: always end the font list with a generic font like sans-serif, in case the first font is missing.</q>
+        </section>
+        <section class = "box" id = "borders">
+            <h2>4. Borders</h2>
+            <p>border draws a line around an element. You give the width, the style (solid, dashed, dotted) and the colour.</p>
+            <section class = "examples">
+                <h3>CSS rule	Before (no CSS)	After (with the rule)</h3>
+                <blockquote>
+                .blue-border {<br>
+                   border: 3px solid blue;<br>
+                }
+                </blockquote>
+                This is a paragraph.
+                
+                This is a paragraph.
+            </section>
+            <q>Remember: border: width style colour; in that order.</q>
+        </section>
+        <section class = "box" id = "margin">
+            <h2>5. Margin</h2>
+            <p>margin is the space outside the border. It pushes other elements away. The grey boxes show where each paragraph is.</p>
+            <section class = "examples">
+                <h3>CSS rule	Before (no CSS)	After (with the rule)</h3>
+                <blockquote>
+                p.with-margin {<br>
+                   margin: 25px;<br>
+                }
+                </blockquote>
+                First paragraph
+                Second paragraph
+                
+                First paragraph
+                Second paragraph
+            </section>
+            <q>Remember: margin is outside the box, so the grey box does not get bigger.</q>
+        </section>
+        <section class = "box" id = "padding">
+            <h2>6. Padding</h2>
+            <p>padding is the space inside the border, between the text and the edge of the box.</p>
+            <section class = "examples">
+                <h3>CSS rule	Before (no CSS)	After (with the rule)</h3>
+                <blockquote>
+                p.with-padding {<br>
+                   padding: 20px;<br>
+                }
+                </blockquote>
+                This is a paragraph.
+                
+                This is a paragraph.
+            </section>
+            <q>Remember: padding is inside the box, so the grey box gets bigger.</q>
+        </section>
+        <section class = "box">
+            <h2>Margin or padding?</h2>
+            <table border = "1">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Margin</th>
+                        <th>Padding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Where is it?</td>
+                        <td>Outside the border</td>
+                        <td>Inside the border</td>
+                    </tr>
+                    <tr>
+                        <td>What does it do?</td>	
+                        <td>Pushes other elements away</td>	
+                        <td>Makes space around the text inside the box</td>
+                    </tr>
+                    <tr>
+                        <td>Does the box get bigger?</td>	
+                        <td>No</td>	
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>The box model</strong> (from outside to inside):</p>
+            <img src="boxmodel.png" alt = "box model">
+            <p>The dashed line is the outside edge of the margin. The thick cyan line is the border.</p>
+        </section>
+    </body>
+</html>
